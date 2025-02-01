@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Selling Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .buy-button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .buy-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our PDF Store</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <h2>PDF Document 1</h2>
+            <p>Description of PDF Document 1. This is a great resource for learning.</p>
+            <button class="buy-button" onclick="buyPdf('PDF1')">Buy Now</button>
+        </div>
+        <div class="product">
+            <h2>PDF Document 2</h2>
+            <p>Description of PDF Document 2. Another excellent resource for advanced learners.</p>
+            <button class="buy-button" onclick="buyPdf('PDF2')">Buy Now</button>
+        </div>
+    </div>
+
+    <script>
+        function buyPdf(pdfName) {
+            const paymentMethod = prompt("Choose payment method: 1. bKash 2. Nagad");
+            if (paymentMethod == 1) {
+                alert(`Please complete the payment via bKash to 017XXXXXXXX for ${pdfName}.`);
+            } else if (paymentMethod == 2) {
+                alert(`Please complete the payment via Nagad to 017XXXXXXXX for ${pdfName}.`);
+            } else {
+                alert("Invalid payment method selected.");
+            }
+        }
+    </script>
+</body>
+</html>
